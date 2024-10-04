@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:lottie/lottie.dart';
 
 class Startpg extends StatefulWidget {
   const Startpg({super.key});
@@ -10,6 +11,76 @@ class Startpg extends StatefulWidget {
 class _StartpgState extends State<Startpg> {
   @override
   Widget build(BuildContext context) {
-    return const Scaffold();
+    return Scaffold(
+      extendBodyBehindAppBar: true,
+      backgroundColor: Colors.transparent,
+      body: Container(
+        decoration: const BoxDecoration(
+          gradient: LinearGradient(
+            begin: Alignment.topLeft,
+            end: Alignment.bottomRight,
+            colors: [Colors.redAccent, Colors.greenAccent, Colors.purple],
+          ),
+        ),
+        child: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Padding(
+                padding: const EdgeInsets.symmetric(vertical: 50),
+                child: RichText(
+                  textAlign: TextAlign.center,
+                  text: const TextSpan(
+                    children: [
+                      TextSpan(
+                        text: "WELCOME TO \n",
+                        style: TextStyle(
+                          fontSize: 40,
+                          fontWeight: FontWeight.w600,
+                          color: Colors.black,
+                          height: 2,
+                        ),
+                      ),
+                      TextSpan(
+                        text: "Air Quality Monitoring and Prediction System \n",
+                        style: TextStyle(
+                          fontSize: 20,
+                          height: 2,
+                          color: Colors.black,
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+              Lottie.asset('assets/Pollution.json', height: 300, width: 300),
+              const SizedBox(height: 30),
+              Container(
+                width: 250,
+                height: 50,
+                decoration: BoxDecoration(
+                  gradient: const LinearGradient(
+                    colors: [Colors.black87, Colors.black54, Colors.black45],
+                    begin: Alignment.bottomLeft,
+                    end: Alignment.topRight,
+                  ),
+                  borderRadius: BorderRadius.circular(10),
+                ),
+                child: MaterialButton(
+                  onPressed: () {},
+                  height: 45,
+                  minWidth: 15,
+                  textColor: Colors.white,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                  child: const Text("Continue"),
+                ),
+              ),
+            ],
+          ),
+        ),
+      ),
+    );
   }
 }

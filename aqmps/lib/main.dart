@@ -4,10 +4,13 @@ import 'package:provider/provider.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
-  runApp((MultiProvider(
+  runApp(
+    /*MultiProvider(
     providers: const [],
-    child: const MyApp(),
-  )));
+    child:*/
+    const MyApp(), /*
+  ))*/
+  );
 }
 
 class MyApp extends StatefulWidget {
