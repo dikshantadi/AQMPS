@@ -21,9 +21,9 @@ class _StartpgState extends State<Startpg> {
               begin: Alignment.topLeft,
               end: Alignment.bottomRight,
               colors: [
-                Color(0xFF00C9FF), //light sky blue
-                Color(0xFF92FE9D), //light green
-                Color(0xFFA18CD1), //soft lavandar
+                Color(0xFF00C9FF), // Light sky blue
+                Color(0xFF92FE9D), // Light green
+                Color(0xFFA18CD1), // Soft lavender
               ]),
         ),
         child: Center(
@@ -41,7 +41,7 @@ class _StartpgState extends State<Startpg> {
                         style: TextStyle(
                           fontSize: 40,
                           fontWeight: FontWeight.w600,
-                          color: Colors.black,
+                          color: Colors.white,
                           height: 2,
                         ),
                       ),
@@ -50,7 +50,7 @@ class _StartpgState extends State<Startpg> {
                         style: TextStyle(
                           fontSize: 19,
                           height: 2,
-                          color: Colors.black,
+                          color: Colors.white,
                         ),
                       ),
                     ],
@@ -64,11 +64,23 @@ class _StartpgState extends State<Startpg> {
                 height: 50,
                 decoration: BoxDecoration(
                   gradient: const LinearGradient(
-                    colors: [Colors.black87, Colors.black54, Colors.black45],
+                    colors: [
+                      Color(0xFF00B4D8), // Light ocean blue
+                      Color(0xFF90E0EF), // Soft teal
+                      Color(0xFF90E0EF), // Light aqua
+                    ],
                     begin: Alignment.bottomLeft,
                     end: Alignment.topRight,
                   ),
-                  borderRadius: BorderRadius.circular(10),
+                  borderRadius: BorderRadius.circular(30),
+                  boxShadow: [
+                    BoxShadow(
+                      color: Colors.grey.withOpacity(0.9), // Shadow color
+                      spreadRadius: 5,
+                      blurRadius: 7,
+                      offset: Offset(0, 2), // Shadow position
+                    ),
+                  ],
                 ),
                 child: MaterialButton(
                   onPressed: () {
@@ -77,13 +89,21 @@ class _StartpgState extends State<Startpg> {
                       MaterialPageRoute(builder: (context) => const Homepg()),
                     );
                   },
-                  height: 45,
-                  minWidth: 15,
+                  height: 50,
+                  minWidth: double.infinity,
                   textColor: Colors.white,
                   shape: RoundedRectangleBorder(
-                    borderRadius: BorderRadius.circular(10),
+                    borderRadius: BorderRadius.circular(30),
                   ),
-                  child: const Text("Continue"),
+                  child: const Text(
+                    "Continue",
+                    style: TextStyle(
+                      color: Colors.black,
+                      fontSize: 18,
+                      fontWeight: FontWeight.bold,
+                      letterSpacing: 1.2, // Spacing between letters
+                    ),
+                  ),
                 ),
               ),
             ],
