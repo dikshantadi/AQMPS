@@ -18,10 +18,13 @@ class _StartpgState extends State<Startpg> {
       body: Container(
         decoration: const BoxDecoration(
           gradient: LinearGradient(
-            begin: Alignment.topLeft,
-            end: Alignment.bottomRight,
-            colors: [Colors.redAccent, Colors.greenAccent, Colors.purple],
-          ),
+              begin: Alignment.topLeft,
+              end: Alignment.bottomRight,
+              colors: [
+                Color(0xFF00C9FF), //light sky blue
+                Color(0xFF92FE9D), //light green
+                Color(0xFFA18CD1), //soft lavandar
+              ]),
         ),
         child: Center(
           child: Column(
