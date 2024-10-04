@@ -41,7 +41,7 @@ class _StartpgState extends State<Startpg> {
                         style: TextStyle(
                           fontSize: 40,
                           fontWeight: FontWeight.w600,
-                          color: Colors.white,
+                          color: Colors.black54,
                           height: 2,
                         ),
                       ),
@@ -50,7 +50,7 @@ class _StartpgState extends State<Startpg> {
                         style: TextStyle(
                           fontSize: 19,
                           height: 2,
-                          color: Colors.white,
+                          color: Colors.black54,
                         ),
                       ),
                     ],
@@ -98,7 +98,7 @@ class _StartpgState extends State<Startpg> {
                   child: const Text(
                     "Continue",
                     style: TextStyle(
-                      color: Colors.black,
+                      color: Colors.black54,
                       fontSize: 18,
                       fontWeight: FontWeight.bold,
                       letterSpacing: 1.2, // Spacing between letters
