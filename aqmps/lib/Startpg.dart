@@ -1,3 +1,4 @@
+import 'package:aqmps/homepg.dart';
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 
@@ -44,7 +45,7 @@ class _StartpgState extends State<Startpg> {
                       TextSpan(
                         text: "Air Quality Monitoring and Prediction System \n",
                         style: TextStyle(
-                          fontSize: 20,
+                          fontSize: 19,
                           height: 2,
                           color: Colors.black,
                         ),
@@ -67,7 +68,12 @@ class _StartpgState extends State<Startpg> {
                   borderRadius: BorderRadius.circular(10),
                 ),
                 child: MaterialButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => const Homepg()),
+                    );
+                  },
                   height: 45,
                   minWidth: 15,
                   textColor: Colors.white,
