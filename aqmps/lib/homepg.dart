@@ -1,3 +1,4 @@
+import 'package:aqmps/Constant/Constant.dart';
 import 'package:aqmps/util/responsive.dart';
 import 'package:aqmps/widget/Dashboard.dart';
 import 'package:aqmps/widget/side_menu_widget.dart';
@@ -19,14 +20,11 @@ class _HomepgState extends State<Homepg> {
 
     return Scaffold(
         drawer: !isDesktop
-            ? const SizedBox(
-                width: 250,
-                child: SideMenuWidget(),
-              )
+            ? Container(color: backgroundColor, child: SideMenuWidget())
             : null,
         endDrawer: Responsive.isMobile(context)
-            ? SizedBox(
-                width: MediaQuery.of(context).size.width * 0.8,
+            ? Container(
+                color: backgroundColor,
                 child: const SummaryWidget(),
               )
             : null,

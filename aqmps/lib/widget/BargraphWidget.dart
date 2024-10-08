@@ -1,5 +1,6 @@
 import 'package:aqmps/Data/bargraphdata.dart';
 import 'package:aqmps/models/graphmodel.dart';
+import 'package:aqmps/util/responsive.dart';
 import 'package:aqmps/widget/Custom_card_widget.dart';
 import 'package:fl_chart/fl_chart.dart';
 import 'package:flutter/material.dart';
@@ -12,15 +13,16 @@ class Bargraphcard extends StatelessWidget {
   Widget build(BuildContext context) {
     final bargraphdata = Bargraphdata();
     const days = ['S', 'M', 'T', 'W', 'Th', 'F', 'Sa'];
+
     return GridView.builder(
       itemCount: bargraphdata.data.length,
       shrinkWrap: true,
       physics: const ScrollPhysics(),
-      gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-        crossAxisCount: 3,
-        crossAxisSpacing: 15,
+      gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+        crossAxisCount: Responsive.isMobile(context) ? 2 : 3,
+        crossAxisSpacing: Responsive.isMobile(context) ? 12 : 15,
         mainAxisSpacing: 12,
-        childAspectRatio: 5 / 4,
+        childAspectRatio: 1,
       ),
       itemBuilder: (context, index) {
         return CustomCard(
@@ -29,7 +31,7 @@ class Bargraphcard extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Padding(
-                padding: const EdgeInsets.all(8.0),
+                padding: const EdgeInsets.all(6.0),
                 child: Text(
                   bargraphdata.data[index].label,
                 ),

@@ -17,7 +17,7 @@ class Headerwidget extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.only(right: 20),
               child: InkWell(
-                onTap: () => Scaffold.of(context).openDrawer,
+                onTap: () => Scaffold.of(context).openDrawer(),
                 child: Padding(
                   padding: const EdgeInsets.all(4.0),
                   child: Icon(
@@ -64,7 +64,7 @@ class Headerwidget extends StatelessWidget {
                   onPressed: () {},
                 ),
                 InkWell(
-                  onTap: () => Scaffold.of(context).openEndDrawer,
+                  onTap: () => Scaffold.of(context).openEndDrawer(),
                   child: CircleAvatar(
                     backgroundColor: Colors.transparent,
                     child: Icon(
