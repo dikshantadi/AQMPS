@@ -7,27 +7,30 @@ class Headerwidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Expanded(
-        child: TextField(
-      decoration: InputDecoration(
-          filled: true,
-          fillColor: cardBackgroundColor,
-          enabledBorder: const OutlineInputBorder(
-            borderSide: BorderSide(color: Colors.transparent),
-          ),
-          border: OutlineInputBorder(borderRadius: BorderRadius.circular(12.0)),
-          focusedBorder: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(12.0),
-          ),
-          contentPadding: const EdgeInsets.symmetric(
-            vertical: 5,
-          ),
-          hintText: 'Search',
-          prefixIcon: const Icon(
-            Iconsax.search_normal,
-            color: Colors.grey,
-            size: 21,
-          )),
-    ));
+    return Container(
+      width: 850,
+      child: TextField(
+        decoration: InputDecoration(
+            filled: true,
+            fillColor: cardBackgroundColor,
+            enabledBorder: const OutlineInputBorder(
+              borderSide: BorderSide(color: Colors.transparent),
+            ),
+            border:
+                OutlineInputBorder(borderRadius: BorderRadius.circular(12.0)),
+            focusedBorder: OutlineInputBorder(
+              borderRadius: BorderRadius.circular(12.0),
+            ),
+            contentPadding: const EdgeInsets.symmetric(
+              vertical: 5,
+            ),
+            hintText: 'Search',
+            prefixIcon: const Icon(
+              Iconsax.search_normal,
+              color: Colors.grey,
+              size: 21,
+            )),
+      ),
+    );
   }
 }

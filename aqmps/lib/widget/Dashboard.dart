@@ -1,3 +1,4 @@
+import 'package:aqmps/widget/ActivityDetailCard.dart';
 import 'package:aqmps/widget/headerwidget.dart';
 import 'package:flutter/material.dart';
 
@@ -12,6 +13,8 @@ class Dashboard extends StatelessWidget {
           height: 18,
         ),
         Headerwidget(),
+        const SizedBox(height: 18),
+        Activitydetailcard(),
       ],
     );
   }
