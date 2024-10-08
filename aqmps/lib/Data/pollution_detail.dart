@@ -4,18 +4,11 @@ class PollutionDetail {
   // ignore: non_constant_identifier_names
   final PollutionData = const [
     PollutionModel(
-        icon: 'aqmps/assets/Images/co2.jpg',
-        value: '0',
-        title: "Carbon Dioxide"),
+        icon: 'assets/Images/co.png', value: '0', title: "Carbon Monoxide"),
+    PollutionModel(icon: "assets/Images/dust.png", value: '0', title: 'Dust'),
     PollutionModel(
-        icon: "aqmps/assets/Images/Carbon-monoxide.png",
-        value: '0',
-        title: 'Carbon Monoxide'),
+        icon: 'assets/Images/no2.png', value: '0', title: "Nitrogen Dioxide"),
     PollutionModel(
-        icon: 'aqmps/assets/Images/so2.png',
-        value: '0',
-        title: "Sulfur Dioxide"),
-    PollutionModel(
-        icon: 'aqmps/assets/Images/pm2.5.png', value: '0', title: "PM 2.5"),
+        icon: 'assets/Images/so2(1).png', value: '0', title: "Sulfer Dioxide"),
   ];
 }

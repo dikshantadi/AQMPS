@@ -23,6 +23,10 @@ class Activitydetailcard extends StatelessWidget {
               pollutiondetail.PollutionData[index].icon,
               width: 30,
               height: 30,
+            ),
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Text(pollutiondetail.PollutionData[index].title),
             )
           ],
         ),
