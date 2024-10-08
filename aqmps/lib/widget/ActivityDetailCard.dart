@@ -1,4 +1,5 @@
 import 'package:aqmps/Data/pollution_detail.dart';
+import 'package:aqmps/util/responsive.dart';
 import 'package:aqmps/widget/Custom_card_widget.dart';
 import 'package:flutter/material.dart';
 
@@ -27,9 +28,9 @@ class Activitydetailcard extends StatelessWidget {
             itemCount: pollutiondetail.PollutionData.length,
             shrinkWrap: true,
             physics: const NeverScrollableScrollPhysics(),
-            gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-              crossAxisCount: 4,
-              crossAxisSpacing: 15,
+            gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+              crossAxisCount: Responsive.isMobile(context) ? 2 : 4,
+              crossAxisSpacing: Responsive.isMobile(context) ? 12 : 15,
               mainAxisSpacing: 12,
             ),
             itemBuilder: (context, index) => CustomCard(

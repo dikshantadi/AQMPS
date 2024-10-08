@@ -1,3 +1,4 @@
+import 'package:aqmps/util/responsive.dart';
 import 'package:aqmps/widget/Dashboard.dart';
 import 'package:aqmps/widget/side_menu_widget.dart';
 import 'package:aqmps/widget/summary_widget.dart';
@@ -14,22 +15,38 @@ class Homepg extends StatefulWidget {
 class _HomepgState extends State<Homepg> {
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(
-        body: SafeArea(
-      child: Row(
-        children: [
-          Expanded(
-              flex: 2,
-              child: SizedBox(
+    final isDesktop = Responsive.isDesktop(context);
+
+    return Scaffold(
+        drawer: !isDesktop
+            ? const SizedBox(
+                width: 250,
                 child: SideMenuWidget(),
-              )),
-          Expanded(flex: 7, child: Dashboard()),
-          Expanded(
-            flex: 3,
-            child: SummaryWidget(),
-          )
-        ],
-      ),
-    ));
+              )
+            : null,
+        endDrawer: Responsive.isMobile(context)
+            ? SizedBox(
+                width: MediaQuery.of(context).size.width * 0.8,
+                child: const SummaryWidget(),
+              )
+            : null,
+        body: SafeArea(
+          child: Row(
+            children: [
+              if (isDesktop)
+                Expanded(
+                    flex: 2,
+                    child: SizedBox(
+                      child: SideMenuWidget(),
+                    )),
+              Expanded(flex: 7, child: Dashboard()),
+              if (isDesktop)
+                Expanded(
+                  flex: 3,
+                  child: SummaryWidget(),
+                )
+            ],
+          ),
+        ));
   }
 }

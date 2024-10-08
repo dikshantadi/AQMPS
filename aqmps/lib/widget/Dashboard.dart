@@ -1,6 +1,8 @@
+import 'package:aqmps/util/responsive.dart';
 import 'package:aqmps/widget/ActivityDetailCard.dart';
 import 'package:aqmps/widget/BargraphWidget.dart';
 import 'package:aqmps/widget/headerwidget.dart';
+import 'package:aqmps/widget/summary_widget.dart';
 import 'package:flutter/material.dart';
 
 class Dashboard extends StatelessWidget {
@@ -8,7 +10,7 @@ class Dashboard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const SingleChildScrollView(
+    return SingleChildScrollView(
       child: Column(
         children: [
           SizedBox(
@@ -25,6 +27,8 @@ class Dashboard extends StatelessWidget {
           Activitydetailcard(sensorName: "Prediction"),
           SizedBox(height: 18),
           Bargraphcard(),
+          SizedBox(height: 18),
+          if (Responsive.isTablet(context)) SummaryWidget()
         ],
       ),
     );
