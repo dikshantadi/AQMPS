@@ -50,6 +50,10 @@ class Activitydetailcard extends StatelessWidget {
                     padding: const EdgeInsets.all(8.0),
                     child: Text(pollutiondetail.PollutionData[index].value),
                   ),
+                  Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Text(pollutiondetail.PollutionData[index].AQI),
+                  ),
                 ],
               ),
             ),
