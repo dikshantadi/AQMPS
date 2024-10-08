@@ -40,6 +40,7 @@ dependencies:
   flutter_launcher_icons: ^0.14.1
   iconsax: ^0.0.8
   fl_chart: ^0.69.0
+  syncfusion_flutter_gauges: ^27.1.52
 
 dev_dependencies:
   flutter_test:
