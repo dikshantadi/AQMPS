@@ -1,16 +1,16 @@
-import 'package:aqmps/Data/pollution_detail.dart';
+import 'package:aqmps/Data/pollution_detail3.dart';
 import 'package:aqmps/util/responsive.dart';
 import 'package:aqmps/widget/Custom_card_widget.dart';
 import 'package:flutter/material.dart';
 
-class Activitydetailcard extends StatelessWidget {
+class Activitydetailcard3 extends StatelessWidget {
   final String sensorName;
 
-  const Activitydetailcard({super.key, required this.sensorName});
+  const Activitydetailcard3({super.key, required this.sensorName});
 
   @override
   Widget build(BuildContext context) {
-    final pollutiondetail = PollutionDetail();
+    final pollutionDetail3 = PollutionDetail3();
     return Container(
       margin: const EdgeInsets.symmetric(vertical: 8.0),
       child: Column(
@@ -25,7 +25,7 @@ class Activitydetailcard extends StatelessWidget {
           ),
           const SizedBox(height: 8),
           GridView.builder(
-            itemCount: pollutiondetail.PollutionData.length,
+            itemCount: pollutionDetail3.PollutionData.length,
             shrinkWrap: true,
             physics: const NeverScrollableScrollPhysics(),
             gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
@@ -39,21 +39,21 @@ class Activitydetailcard extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Image.asset(
-                    pollutiondetail.PollutionData[index].icon,
+                    pollutionDetail3.PollutionData[index].icon,
                     width: 30,
                     height: 30,
                   ),
                   Padding(
                     padding: const EdgeInsets.all(8.0),
-                    child: Text(pollutiondetail.PollutionData[index].title),
+                    child: Text(pollutionDetail3.PollutionData[index].title),
                   ),
                   Padding(
                     padding: const EdgeInsets.all(8.0),
-                    child: Text(pollutiondetail.PollutionData[index].value),
+                    child: Text(pollutionDetail3.PollutionData[index].value),
                   ),
                   Padding(
                     padding: const EdgeInsets.all(8.0),
-                    child: Text(pollutiondetail.PollutionData[index].AQI),
+                    child: Text(pollutionDetail3.PollutionData[index].AQI),
                   ),
                 ],
               ),

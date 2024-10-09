@@ -1,5 +1,8 @@
 import 'package:aqmps/util/responsive.dart';
-import 'package:aqmps/widget/ActivityDetailCard.dart';
+import 'package:aqmps/widget/ActivityDetail2.dart';
+import 'package:aqmps/widget/ActivityDetail3.dart';
+import 'package:aqmps/widget/ActivityDetail4.dart';
+import 'package:aqmps/widget/ActivityDetailCard1.dart';
 import 'package:aqmps/widget/BargraphWidget.dart';
 import 'package:aqmps/widget/headerwidget.dart';
 import 'package:aqmps/widget/summary_widget.dart';
@@ -18,13 +21,13 @@ class Dashboard extends StatelessWidget {
           ),
           Headerwidget(),
           SizedBox(height: 18),
-          Activitydetailcard(sensorName: "Sensor 1"),
+          Activitydetailcard1(sensorName: "Sensor 1"),
           SizedBox(height: 18),
-          Activitydetailcard(sensorName: "Sensor 2"),
+          Activitydetailcard2(sensorName: "Sensor 2"),
           SizedBox(height: 18),
-          Activitydetailcard(sensorName: "Sensor 3"),
+          Activitydetailcard3(sensorName: "Sensor 3"),
           SizedBox(height: 18),
-          Activitydetailcard(sensorName: "Prediction"),
+          Activitydetailcard4(sensorName: "Prediction"),
           SizedBox(height: 18),
           Bargraphcard(),
           SizedBox(height: 18),
