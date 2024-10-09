@@ -1,6 +1,7 @@
-import 'package:aqmps/homepg.dart';
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
+import 'package:aqmps/homepg.dart';
+import 'package:aqmps/util/responsive.dart';
 
 class Startpg extends StatefulWidget {
   const Startpg({super.key});
@@ -12,6 +13,24 @@ class Startpg extends StatefulWidget {
 class _StartpgState extends State<Startpg> {
   @override
   Widget build(BuildContext context) {
+    // to get device size
+    final isMobile = Responsive.isMobile(context);
+    final isTablet = Responsive.isTablet(context);
+    final isDesktop = Responsive.isDesktop(context);
+
+    final double titleFontSize = isMobile
+        ? 30
+        : isTablet
+            ? 35
+            : 40;
+    final double subtitleFontSize = isMobile
+        ? 15
+        : isTablet
+            ? 18
+            : 19;
+    final double buttonWidth = isMobile ? 200 : 250;
+    final double buttonHeight = isMobile ? 40 : 50;
+
     return Scaffold(
       extendBodyBehindAppBar: true,
       backgroundColor: Colors.transparent,
@@ -34,21 +53,22 @@ class _StartpgState extends State<Startpg> {
                 padding: const EdgeInsets.symmetric(vertical: 50),
                 child: RichText(
                   textAlign: TextAlign.center,
-                  text: const TextSpan(
+                  text: TextSpan(
                     children: [
                       TextSpan(
-                        text: "WELCOME TO \n",
+                        text: "Air Quality Monitoring\n",
                         style: TextStyle(
-                          fontSize: 40,
+                          fontSize: titleFontSize,
                           fontWeight: FontWeight.w600,
                           color: Colors.black54,
                           height: 2,
                         ),
                       ),
                       TextSpan(
-                        text: "Air Quality Monitoring and Prediction System \n",
+                        text: "and Prediction System \n",
                         style: TextStyle(
-                          fontSize: 19,
+                          fontSize: subtitleFontSize,
+                          fontWeight: FontWeight.w600,
                           height: 2,
                           color: Colors.black54,
                         ),
@@ -57,11 +77,21 @@ class _StartpgState extends State<Startpg> {
                   ),
                 ),
               ),
-              Lottie.asset('assets/Pollution.json', height: 300, width: 300),
+              Lottie.asset('assets/Pollution.json',
+                  height: isMobile
+                      ? 250
+                      : isTablet
+                          ? 280
+                          : 300,
+                  width: isMobile
+                      ? 250
+                      : isTablet
+                          ? 280
+                          : 300),
               const SizedBox(height: 30),
               Container(
-                width: 250,
-                height: 50,
+                width: buttonWidth,
+                height: buttonHeight,
                 decoration: BoxDecoration(
                   gradient: const LinearGradient(
                     colors: [
@@ -75,10 +105,10 @@ class _StartpgState extends State<Startpg> {
                   borderRadius: BorderRadius.circular(30),
                   boxShadow: [
                     BoxShadow(
-                      color: Colors.grey.withOpacity(0.9), // Shadow color
+                      color: Colors.grey.withOpacity(0.9), // shadow color
                       spreadRadius: 5,
                       blurRadius: 7,
-                      offset: Offset(0, 2), // Shadow position
+                      offset: const Offset(0, 2), // shadow position
                     ),
                   ],
                 ),
@@ -89,19 +119,19 @@ class _StartpgState extends State<Startpg> {
                       MaterialPageRoute(builder: (context) => const Homepg()),
                     );
                   },
-                  height: 50,
+                  height: buttonHeight,
                   minWidth: double.infinity,
                   textColor: Colors.white,
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(30),
                   ),
-                  child: const Text(
+                  child: Text(
                     "Continue",
                     style: TextStyle(
                       color: Colors.black54,
-                      fontSize: 18,
+                      fontSize: isMobile ? 16 : 18,
                       fontWeight: FontWeight.bold,
-                      letterSpacing: 1.2, // Spacing between letters
+                      letterSpacing: 1.2,
                     ),
                   ),
                 ),
