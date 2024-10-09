@@ -16,7 +16,6 @@ class _StartpgState extends State<Startpg> {
     // to get device size
     final isMobile = Responsive.isMobile(context);
     final isTablet = Responsive.isTablet(context);
-    final isDesktop = Responsive.isDesktop(context);
 
     final double titleFontSize = isMobile
         ? 30

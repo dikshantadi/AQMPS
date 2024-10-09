@@ -41,6 +41,8 @@ dependencies:
   iconsax: ^0.0.8
   fl_chart: ^0.69.0
   syncfusion_flutter_gauges: ^27.1.52
+  mqtt_client: ^10.3.0
+  influxdb_client: ^2.10.0
 
 dev_dependencies:
   flutter_test:

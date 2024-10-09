@@ -1,4 +1,5 @@
 import 'package:aqmps/widget/AQIdetail.dart';
+import 'package:aqmps/widget/Temperaturedetail.dart';
 import 'package:aqmps/widget/gauge.dart';
 import 'package:flutter/material.dart';
 
@@ -17,7 +18,12 @@ class SummaryWidget extends StatelessWidget {
         Padding(
           padding: EdgeInsets.all(30.0),
           child: Aqidetail(),
-        )
+        ),
+        SizedBox(height: 20),
+        Padding(
+          padding: EdgeInsets.all(30.0),
+          child: TemperatureDetail(),
+        ),
       ], //aile lai dummy
     ));
   }

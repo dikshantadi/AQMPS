@@ -20,7 +20,7 @@ class _HomepgState extends State<Homepg> {
 
     return Scaffold(
         drawer: !isDesktop
-            ? Container(color: backgroundColor, child: SideMenuWidget())
+            ? Container(color: backgroundColor, child: const SideMenuWidget())
             : null,
         endDrawer: Responsive.isMobile(context)
             ? Container(
@@ -32,14 +32,14 @@ class _HomepgState extends State<Homepg> {
           child: Row(
             children: [
               if (isDesktop)
-                Expanded(
+                const Expanded(
                     flex: 2,
                     child: SizedBox(
                       child: SideMenuWidget(),
                     )),
-              Expanded(flex: 7, child: Dashboard()),
+              const Expanded(flex: 7, child: Dashboard()),
               if (isDesktop)
-                Expanded(
+                const Expanded(
                   flex: 3,
                   child: SummaryWidget(),
                 )
