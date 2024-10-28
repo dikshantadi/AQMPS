@@ -23,10 +23,12 @@ class _HomepgState extends State<Homepg> {
             ? Container(color: backgroundColor, child: const SideMenuWidget())
             : null,
         endDrawer: Responsive.isMobile(context)
-            ? Container(
-                color: backgroundColor,
-                child: const SummaryWidget(),
-              )
+            ? SafeArea(
+              child: Container(
+                  color: backgroundColor,
+                  child: const SummaryWidget(),
+                ),
+            )
             : null,
         body: SafeArea(
           child: Row(

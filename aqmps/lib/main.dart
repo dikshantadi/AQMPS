@@ -1,7 +1,6 @@
 import 'package:aqmps/Constant/Constant.dart';
 import 'package:aqmps/Startpg.dart';
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
 
 void main() {
   WidgetsFlutterBinding.ensureInitialized();
