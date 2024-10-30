@@ -1,5 +1,5 @@
 import 'package:aqmps/Constant/Constant.dart';
-import 'package:aqmps/Startpg.dart';
+import 'package:aqmps/pages/Startpg.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -30,6 +30,6 @@ class _MyAppState extends State<MyApp> {
           scaffoldBackgroundColor: backgroundColor,
           brightness: Brightness.dark,
         ),
-        home: Startpg());
+        home: const Startpg());
   }
 }

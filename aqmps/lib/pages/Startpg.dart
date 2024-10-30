@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
-import 'package:aqmps/homepg.dart';
+import 'package:aqmps/pages/homepg.dart';
 import 'package:aqmps/util/responsive.dart';
 
 class Startpg extends StatefulWidget {
