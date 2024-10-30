@@ -1,5 +1,6 @@
 import 'package:aqmps/Constant/Constant.dart';
 import 'package:aqmps/Data/side_menu_data.dart';
+import 'package:aqmps/pages/about_us_page.dart';
 import 'package:flutter/material.dart';
 
 class SideMenuWidget extends StatefulWidget {
@@ -35,9 +36,23 @@ class _SideMenuWidgetState extends State<SideMenuWidget> {
           borderRadius: const BorderRadius.all(Radius.circular(6.0)),
           color: isSelected ? selectionColor : Colors.transparent),
       child: InkWell(
-        onTap: () => setState(() {
-          selectedIndex = index;
-        }),
+        onTap: () {
+          setState(() {
+            selectedIndex = index;
+          });
+
+          // Navigation based on the title
+          switch (data.menu[index].title) {
+            case 'About Us':
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => AboutUsPage()),
+              );
+              break;
+            default:
+              break;
+          }
+        },
         child: Row(children: [
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 25, vertical: 20),
