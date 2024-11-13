@@ -1,6 +1,7 @@
 import 'package:aqmps/Constant/Constant.dart';
 import 'package:aqmps/Data/side_menu_data.dart';
 import 'package:aqmps/pages/about_us_page.dart';
+import 'package:aqmps/pages/learn_more.dart';
 import 'package:flutter/material.dart';
 
 class SideMenuWidget extends StatefulWidget {
@@ -43,6 +44,9 @@ class _SideMenuWidgetState extends State<SideMenuWidget> {
 
           // Navigation based on the title
           switch (data.menu[index].title) {
+            case 'Learn More':
+              Navigator.push(context,
+                  MaterialPageRoute(builder: (context) => LearnMore()));
             case 'About Us':
               Navigator.push(
                 context,
