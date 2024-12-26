@@ -15,6 +15,7 @@ class _LearnMoreState extends State<LearnMore> {
         title: const Text("Learn More"),
         centerTitle: true,
       ),
+      
     );
   }
 }
