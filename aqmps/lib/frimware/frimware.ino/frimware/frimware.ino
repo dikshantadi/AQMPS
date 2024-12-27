@@ -23,7 +23,7 @@ void setup() {
 
   // Initialize LoRa
   LoRa.setPins(SS_PIN, RST_PIN, DIO0_PIN);
-  if (!LoRa.begin(915E6)) {  // Use 915 MHz (adjust based on region)
+  if (!LoRa.begin(433E6)) {  // Use 433 MHz (adjust based on region)
     Serial.println("LoRa initialization failed!");
     while (1);
   }
